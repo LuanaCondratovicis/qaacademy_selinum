@@ -15,6 +15,7 @@ public class PrimeiraClasse {
         driver.get("https://www.qaacademy.com.br/");
         
         driver.findElement(By.xpath(cursosPresenciaisBotao)).click();
+        driver.findElement(By.id(cursosOnline)).click();
 
     }
     
