@@ -18,7 +18,7 @@ public class ExercicioFormulario{
     String hobbies = "//*[@id='checkbox2']";
     String skills = "//*[@id='Skills']";
     String selecaoskills = "//*[@id='Skills']/option[4]";
-    String pais = "//*[@id='basicBootstrapForm']/div[10]/div/span/span[1]/span";
+    String pais = "//*[@id='basicBootstrapForm']/div[10]/div/span/span[1]/span"; 
     String pais2= "//*[@id='select2-country-results']/li[5]";
     String ano = "//*[@id='yearbox']";
     String ano2= "//*[@id='yearbox']/option[86]";
@@ -27,16 +27,14 @@ public class ExercicioFormulario{
     String data = "//*[@id='daybox']";
     String data2 = "//*[@id='daybox']/option[26]";
     String senha = "//*[@id='firstpassword']";
-    String senha2= "//*[@id='secondpassword']";
-
-
+    String senha2= "//*[@id='secondpassword']"; 
 
 @Test
 public void preencherDados() throws InterruptedException{
     WebDriver driver = new ChromeDriver();
    // Thread.sleep(6000);// para dar uma pausa no site
     driver.get("https://demo.automationtesting.in/Register.html");
-    driver.manage().window().maximize();
+    driver.manage().window().maximize(); //p para maximizar a página
     driver.findElement(By.xpath(primeiroNome)).click();
     driver.findElement(By.xpath(primeiroNome)).sendKeys("Luana");
     driver.findElement(By.xpath(segundoNome)).click();
@@ -56,8 +54,8 @@ public void preencherDados() throws InterruptedException{
         driver.findElement(By.xpath(preencherFemale)).click(); 
     }
     driver.findElement(By.xpath(hobbies)).click();
-    JavascriptExecutor js = (JavascriptExecutor) driver;
-    js.executeScript("window.scrollBy(0,400)", "");
+    JavascriptExecutor js = (JavascriptExecutor) driver;//para descer a pagina
+    js.executeScript("window.scrollBy(0,400)", "");//cont. para descer a pagina
     driver.findElement(By.xpath(skills)).click();
     driver.findElement(By.xpath(selecaoskills)).click();
     driver.findElement(By.xpath(skills)).click();
