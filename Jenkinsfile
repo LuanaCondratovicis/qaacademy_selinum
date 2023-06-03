@@ -5,7 +5,7 @@ pipeline {
         stage('Teste Selenium') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/LuanaCondratovicis/qaacademy_selinum.git'
+                git 'https://github.com/LuanaCondratovicis/qaacademy_selinum'
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean install test"
